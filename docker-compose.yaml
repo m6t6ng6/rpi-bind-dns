@@ -1,0 +1,8 @@
+rpi-bind-dns:
+  image: lauster/rpi-bind-dns:latest
+  restart: always
+  ports:
+    - "53:53/udp"
+    - "10000:10000" 
+  volumes:
+          - /home/pi/git/docker/docker-share/rpi-bind-dns/bind:/data
